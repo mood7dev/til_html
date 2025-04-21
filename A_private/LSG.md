@@ -152,8 +152,3 @@ form이 제출될 때 데이터를 어떤 URL로 보낼지 정해주는 것
 
 `태그*숫자`
 `ctrl + D`
-
-git add .
-git commit
-
-[docs] header 태그 완료

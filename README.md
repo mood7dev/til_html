@@ -286,3 +286,20 @@ git switch header
 - git 프로젝트 초기화
 
 - GitHub : 웹 에서 나의 계정에 코딩 버전을 관리하는 도구
+
+  1.d 내 pc 환경 셋팅
+
+- Node.js 설치
+- VsCode 설치
+- VsCode Extenstion 들 설치
+- VSCode 로 프로젝트 폴더 드래그 준비
+- 프로젝트 폴더 > public 폴더
+- 프로젝트 폴더 > public 폴더 / images 폴더
+- 프로젝트 폴더 > public 폴더 /css 폴더
+- 프로젝트 폴더 > public 폴더 / assets 폴더
+- 프로젝트 폴더 > public 폴더 / index.html 파일
+- 프로젝트 폴더 > README.md 파일 생성
+- VSCode 에 터미널 창에서 git init 실행 (딱 한번만 실행하시면 됩니다)
+- VSCode 에 터미널 창에서 git add. 실행 (모든 파일 추적 시작)
+- 작업을 한참 진행...
+- git add. ㅣ git staus > git commit ...작업내역 기록

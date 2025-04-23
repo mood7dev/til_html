@@ -5,37 +5,96 @@ git commit
 git branch 이름
 git switch 이름
 
-타입 | 의미
-feat | 새로운 기능 추가
-fix | 버그 수정
-docs | 문서 관련 변경 (README, 주석 등)
-style | 코드 스타일 변경 (세미콜론, 들여쓰기 등), 기능 변화 없음
-refactor | 코드 리팩토링 (동작은 같지만 구조 개선 등)
-test | 테스트 코드 추가/수정
-chore | 빌드, 설정, 패키지 매니저 관련 작업 등
-perf | 성능 개선
-ci | CI 관련 설정 변경 (GitHub Actions, Travis 등)
-build | 빌드 시스템이나 외부 종속성 변경
-revert | 이전 커밋 되돌림
+---
 
-# Header 영역 HTML 작업해 보기
+# CSS
 
-우리가 매일 작업하는 내역은 분명 보관이 되어야 합니다.
-그래서 업무 시작 시 항상 아래 단계로 진행합니다.
+- 16진수
 
-    1. git status
-    ========================
-    2. git add .
-    3. git commit
+### 1.1 lnline 방식
 
-git branch -v : branch 목록을 확인하고
-git branch -D 브랜치 : branch 목록에서 layout 제거하기 무조건
-git branch -d 브랜치 : mearge (브랜치들 하나로 합치기)
+- html 태그에 직접 작성해 주는 방식
 
-🔄 브랜치 관리
-git branch # 브랜치 목록 보기
-git branch <이름> # 브랜치 생성
-git checkout <이름> # 브랜치 전환
-git switch <이름> # 브랜치 전환 (추천)
-git merge <브랜치> # 현재 브랜치에 다른 브랜치 병합
-git branch -d <이름> # 브랜치 삭제
+### 1.2 link 방식
+
+- file로 작성해서 link 하는 방식 (경로/파일명.css)
+- css 폴더/common.css 파일을 생성
+
+### 1.3 @import 방식
+
+- css 파일에서 또다른 css 파일을 참조하는 방식
+
+## 2. 모든 태그에 초기화 진행하기
+
+- 웹브라우저 마다 기본적인 css는 적용이 되어있음.
+- 그래서, 웹브라우저 마다 모양이 다르게 보인다.
+- 아래 내용은 기본 CSS 값으로 추천합니다.
+
+## 3. 선택하는 법 (selector)
+
+### 1. 태그 선택법
+
+```css
+태그 {
+}
+```
+
+### 2. 클래스 선택법
+
+```css
+태그.클래스명 {
+}
+```
+
+```css
+.클래스명 {
+}
+```
+
+---
+
+`<link rel="stylesheet" href="css/common.css">`
+
+`outline-style: none;`
+` 요소에 기본적으로 생기는 외곽선(outline)을 없애는 CSS 속성
+
+```css
+@charset "UTF-8"
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* outline-style: none; */
+}
+```
+
+`font-size: 1rem;`
+
+- 웹 개발에서 폰트 크기를 유연하고 일관되게 설정할 때 아주 자주 쓰이는 단위
+
+---
+
+### 가운데 정렬(1)
+
+`margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;`
+
+### 가운데 정렬(2)
+
+`margin: 0 auto;`
+
+### 가로, 세로 정렬
+
+- `align-items: center;` 세로 가운데 정렬
+- `justify-content: center;` 가로 가운데 정렬
+
+### 오른쪽
+
+`display: flex;`
+
+- 오른쪽
+  `justify-content: space-between;`
+- 여백 사이에 넣어서 오른쪽으로 정렬

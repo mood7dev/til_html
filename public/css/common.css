@@ -1,0 +1,100 @@
+@charset "UTF-8"
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+
+.wrap {
+  width: 100%;
+}
+
+.layouta {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+  height: 163px;
+  background-color: #fff;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.header_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.header_top_left {
+  display: flex;
+  align-items: center;
+}
+
+.header_top_right {
+}
+
+.memeber {
+  display: flex;
+}
+
+.header_bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.cupon {
+  display: flex;
+  align-items: center;
+}
+
+.cupon > li > a {
+  display: flex;
+  align-items: center;
+}
+
+/* 태그 선택 : 추천하는 각 태그별 기본값 */
+a {
+  text-decoration: none;
+  /* 디자인 보고 수정 */
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  width: 100%;
+  /* 디자인 보고 수정 */
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  /* 디자인 보고 수정 */
+  font-size: 1rem;
+  color: #999;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  /* 글꼴 보고 수정 */
+}
+
+span.section_desc {
+  background-color: white;
+  color: #696969;
+}

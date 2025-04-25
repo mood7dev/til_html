@@ -1,19 +1,11 @@
 @charset "UTF-8"
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline-style: none;
-}
-
-.wrap {
-  width: 100%;
-}
-
-.layouta {
-  width: 1280px;
-  margin: 0 auto;
-  background-color: #fff;
 }
 
 /* 태그 선택 : 추천하는 각 태그별 기본값 */
@@ -33,6 +25,20 @@ html {
   font-size: 16px;
 }
 
+.nanum-gothic-regular {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  .roboto-<uniquifier > {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+}
+
 body {
   width: 100%;
   /* 디자인 보고 수정 */
@@ -41,6 +47,19 @@ body {
   letter-spacing: 0px;
   word-spacing: 0px;
   /* 글꼴 보고 수정 */
+  font-family: "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif,
+  letter-spacing: 0px;
+  word-spacing: 0px;
+}
+
+.wrap {
+  width: 100%;
+}
+
+.layouta {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 span.section_desc {
@@ -60,19 +79,46 @@ span.section_desc {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.search {
-  display: flex;
-  align-items: center;
+  margin-top : 30px;
+  margin-bottom : 30px;
 }
 
 .header_top_left {
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+.logo > a > img {
+  width: 150px;
+  height: 38px;
+}
+
+.search_from {
+  display: flex;
+  align-items: center;
+  width: 460px;
+}
+
+.search_from_word {
+  width: calc(460px - 50px);
+  height: 50px;
+  background-color: #f7f7f8;
+  border: none;
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 15px;
+}
+
+.search_from_button {
+  width: 50px;
+  height: 50px;
+  background-color: #f7f7f8;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
 }
 
 .header_top_right {
+  
 }
 
 .memeber {

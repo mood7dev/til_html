@@ -6,6 +6,7 @@
     <title>mytil</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/banner.css" />
   </head>
   <body>
     <!-- 전체 레이아웃 -->
@@ -47,9 +48,9 @@
             <div class="header_bottom">
               <div class="header_bottom_nav">
                 <ul class="nav">
-                  <li><a href="#">홈</a></li>
-                  <li><a href="#">투어</a></li>
-                  <li><a href="#">티켓</a></li>
+                  <li><a href="#" class="focus">홈</a></li>
+                  <li><a href="#" class="no-bold">투어</a></li>
+                  <li><a href="#" class="no-bold">티켓</a></li>
                 </ul>
               </div>
               <div class="header_bottom_eventmenu">
@@ -72,26 +73,29 @@
       <main>
         <div class="layout">
         </div>
-        <!-- banner -->
-        <div class="banner"></div>
-          <div class="banner_list">
-            <a href="#">
-              <img src="images/v1.png" alt="banner" title="배너" />
-            </a>
+        <!-- Banner -->
+        <div class="banner">
+          <div class="banner_slide">
+            <div class="banner_list">
+              <a href="#">
+                <img src="images/v1.png" alt="banner" title="배너" />
+              </a>
+            </div>
+            <div class="banner_list">
+              <a href="#">
+                <img src="images/v2.jpg" alt="banner2" title="배너2" />
+              </a>
+            </div>
           </div>
-          <div class="banner_list">
-            <a href="#">
-              <img src="images/v2.jpg" alt="banner2" title="배너2" />
-            </a>
-          </div>
+
           <button class="slide_bt banner_left">
             <img src="images/slider_arrow.svg" alt="left" title="left" />
-          </button>          
+          </button>
           <button class="slide_bt banner_right">
             <img src="images/slider_arrow.svg" alt="right" title="right" />
-          </button>          
+          </button>
         </div>
-        <!-- tour -->
+        <!-- Tour -->
         <div class="tour">
           <div class="section_top">
             <h2 class="section_title">투어 특가</h2>

@@ -317,3 +317,28 @@ git switch 이름
   - margin-top 은 오류가 발생할 수 있습니다.
 
 `calc(460px - 50px)` 계산적용
+
+## position 을 꼭 기억하자.
+
+### 1. 내가 정확하게 px로 위치를 지정하고 싶다.
+
+- 아래 처럼 할때 정말 주의하세요.
+- 바깥 영역에 `position: relative`가 있어야 해요.
+
+```csss
+position: absolute;
+left: 0px;
+top: 0px;
+right: 0px;
+bottom: 0px;
+```
+
+### 2. 내가 웹 브라우저에 특정 위치를 고정하고 싶다.
+
+```csss
+position: fixed;
+left: 0px;
+top: 0px;
+right: 0px;
+bottom: 0px;
+```

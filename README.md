@@ -325,7 +325,7 @@ git switch 이름
 - 아래 처럼 할때 정말 주의하세요.
 - 바깥 영역에 `position: relative`가 있어야 해요.
 
-```csss
+```css
 position: absolute;
 left: 0px;
 top: 0px;
@@ -335,10 +335,27 @@ bottom: 0px;
 
 ### 2. 내가 웹 브라우저에 특정 위치를 고정하고 싶다.
 
-```csss
+```css
 position: fixed;
 left: 0px;
 top: 0px;
 right: 0px;
 bottom: 0px;
+```
+
+---
+
+- 영역 가운데
+
+```css
+margin: 0 auto
+
+display: flex;
+justify-conents: center;
+```
+
+- 영역 안에 있는 내용 가운데
+
+```css
+
 ```

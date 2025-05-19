@@ -357,5 +357,164 @@ justify-conents: center;
 - 영역 안에 있는 내용 가운데
 
 ```css
-
+.container {
+  display: flex;
+  justify-content: center; /* 가로 정렬 */
+  align-items: center; /* 세로 정렬 */
+}
 ```
+
+## JS 코딩 좋은 위치
+
+- 가장 좋은 자리는 html 이 완료되는 시점.
+
+```js
+// html 의 document 가 모두 로드 되면 실행하기
+// html 의 이미지, 파일 등등 리소스가 준비되면 실행
+// 표준입니다.
+
+// 첫 번째 이벤트: 윈도우가 완전히 로드되면 .wrap 요소를 출력
+window.addEventListener("load", function () {
+  const wrap = document.querySelector(".wrap");
+  console.log(wrap);
+});
+
+// 두 번째 이벤트: 윈도우가 완전히 로드되면 "안녕" 출력
+window.addEventListener("load", function () {
+  console.log("안녕");
+});
+
+// 세 번째 이벤트: DOMContentLoaded가 발생하면 "로딩완료" 출력
+// html 만 로드완료를 체크합니다.
+window.addEventListener("DOMContentLoaded", function () {
+  console.log("로딩완료");
+});
+```
+
+## 요소(Element) 선택법
+
+```js
+// DOM 만 완성하면 됩니다. 기준으로 코드르 진행함 //
+
+window.addEventListener("DOMContentLoaded" function(){} );
+
+` 우리가 원하는 요소(Element)를 선택하는 법? `
+
+-Tag를 선택하고 싶어요. (Tag Element)
+document.getElementsByTagName("태그이름");
+document.getElementsByClassName("클래스이름");
+
+- css 선택자를 이용해서 선택하고 싶어요. ( XSS Selector)
+document.querySelector(".선택자");
+document.querySelectorAll(".선택자");
+
+- ID 선택자를 이용해서 선택하고 싶어요. (ID)
+document.getElementById("아이디");
+```
+
+- 예제
+
+```js
+window.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header");
+  console.log(header);
+
+  const logo = document.querySelector(".logo");
+  console.log(logo);
+
+  const search = document.querySelector(".search");
+  console.log(search);
+
+  const headerTopLeft = document.querySelector(".header_top_left");
+  console.log(headerTopLeft);
+
+  const headerTopRight = document.querySelector(".header_top_right");
+  console.log(headerTopRight);
+
+  const eventMenu = document.querySelector(".header_bottom_eventmenu");
+  console.log(eventMenu);
+});
+```
+
+## 다양한 이벤트의 이해
+
+- 웹브라우저가 체크하는 변화를 `이벤트` 라고 함.
+- 이벤트 작성법 3가지
+
+### 1. 태그에 직접 이벤트 작성하기
+
+```js
+<header class="header" onclick="alert('안녕')"></header>
+```
+
+### 2. 요소에 속성으로 이벤트 작성하기
+
+```js
+const header = this.history.document.querySelector(".header");
+header.onclick = function () {
+  alert("반가워");
+};
+```
+
+```js
+// DOM이 완전히 로드되면 실행
+window.addEventListener("DOMContentLoaded", function () {
+  // .header 요소를 선택
+  const header = document.querySelector(".header");
+
+  // 클릭 시 알림창 띄우기
+  header.onclick = function () {
+    alert("반가워");
+  };
+
+  // 기타 요소들 콘솔에 출력
+  const logo = document.querySelector(".logo");
+  console.log(logo);
+
+  const search = document.querySelector(".search");
+  console.log(search);
+
+  const headerTopLeft = document.querySelector(".header_top_left");
+  console.log(headerTopLeft);
+
+  const headerTopRight = document.querySelector(".header_top_right");
+  console.log(headerTopRight);
+
+  const eventMenu = document.querySelector(".header_bottom_eventmenu");
+  console.log(eventMenu);
+});
+```
+
+### 3. 요소에 이벤트 핸들러로 이벤트 작성하기(표준)
+
+요소.addEventListener("이벤트",function(){});
+
+```js
+  const header = document.querySelector(".header");
+  header.addEventListener("click", function () {
+    alert("표준 반가워");
+```
+
+### 4. 활용빈도가 높은 `윈도우 이벤트`
+
+- `load` : 모든 리소스 (이미지, CSS 등 포함) 가 로드되었을 때 발생
+
+- `DOMContentsLoaded` : DOM이 완전히 준비되었을 때 발생 (이미지 등은 아직 로딩 중일 수 있음)
+
+- `resize` : 웹브라우저 너비, 높이 변경시 발생
+
+- `scroll` : 웹브라우저에 스크롤이 일어나면 발생
+
+### 5. 활용빈도가 높은 `마우스 이벤트`
+
+- `click` : 마우스 클릭(왼쪽)
+- `mouseenter` : 마우스 커서가 요소에 걸쳐지면
+- `mouseleave` : 마우스 커서가 요소에서 벗어나면
+
+### 6. 활용빈도가 높은 `키보드 이벤트`
+
+- `keyup` : 키보드에서 키 입력 후 이벤트
+- `keydown` : 키보드에서 키 입력시 이벤트
+- `keypress` : 키보드에서 키 누르고 있으면 이벤트
+
+### 7. 활용빈도가 높은 `Form 관련 이벤트`

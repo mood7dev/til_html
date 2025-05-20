@@ -35,11 +35,13 @@
 }
 
 .banner_left {
+  z-index: 100;
   left: 0;
   transform: translateX(-50%) translateY(-50%) rotatey(180deg);
 }
 
 .banner_right {
+  z-index: 100;
   right: 0;
   transform: translateX(50%) translateY(-50%);
 }

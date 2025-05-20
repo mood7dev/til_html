@@ -518,3 +518,17 @@ window.addEventListener("DOMContentLoaded", function () {
 - `keypress` : 키보드에서 키 누르고 있으면 이벤트
 
 ### 7. 활용빈도가 높은 `Form 관련 이벤트`
+
+## css 제어법
+
+### 1. inline 형태로 적용하기(가끔 활용)
+
+- `대상.style.css속성 = "값"`
+
+### 2. css 클래스 활용하기 (적극 활용)
+
+## 슬라이드 외부 라이브러리 활용하기
+
+-절대 직접 만들면 안됨.
+
+https://codesandbox.io/

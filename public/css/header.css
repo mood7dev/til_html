@@ -62,16 +62,24 @@
 }
 
 .memeber > li > a {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
-  color: #000;
+  color: #808080;
   line-height: 16px;
 }
 
-.header_bottom {
-  width: 100%;
-  display: flex;
-  align-items: center;
+.header_bottom.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* 다른 요소보다 위에 나오도록 */
+  background-color: #fff; /* 배경색 유지 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 고정 느낌 강조용 */
+}
+
+.header_bottom_spacer {
+  height: 80px; /* header_bottom 높이만큼 설정 */
 }
 
 .nav {
@@ -97,7 +105,8 @@
   display: block;
   font-size: 25px;
   font-weight: 700;
-  padding: 20px 35px;
+  padding: 10px 35px;
+  /* hover 관련 스타일 제거 */
 }
 
 .nav li a::after {
@@ -107,23 +116,42 @@
   bottom: 0;
   transform: translateX(-50%);
   display: block;
-  width: 100%;
+  width: 70%;
   height: 4px;
   background-color: #1c1c1c;
-  opacity: 0;
+  opacity: 0; /* 기본 상태는 보이지 않음 */
   transition: opacity 0.3s;
 }
-.nav li a:hover::after,
+
+/* 클릭 시 표시 (focus 클래스로 컨트롤) */
 .nav li a.focus::after {
   opacity: 1;
 }
 
-.nav li a.no-bold,
-.nav li a.no-bold:hover {
-  font-weight: normal;
+/* hover 시 아무 효과 없음 */
+.nav li a:hover {
+  /* 스타일 지정 안 함으로써 hover 효과 제거 */
+}
+
+.header_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 메뉴를 가운데 정렬 */
+  align-items: center;
+  position: relative; /* 고정되지 않도록 */
+  z-index: 10;
+}
+
+.header_bottom_nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* 네비게이션 메뉴를 가운데로 정렬 */
 }
 
 .header_bottom_eventmenu {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* 쿠폰 메뉴를 가운데로 정렬 */
 }
 
 .cupon {

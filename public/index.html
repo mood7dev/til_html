@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mytil</title>
+    <title>나의 til</title>
+    <!-- 외부라이브러리 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/tour.css" />
+        <!-- js 초기 코드 -->
+        <script src = "js/index.js"></script>
+        <script src = "js/header.js"></script>   
+        <script src = "js/banner.js"></script>
+    
   </head>
   <body>
     <!-- 전체 레이아웃 -->
@@ -47,6 +59,7 @@
             </div>
           <!--상단의 아래-->
             <div class="header_bottom">
+                <!-- 네비게이션 메뉴 -->
               <div class="header_bottom_nav">
                 <ul class="nav">
                   <li><a href="#" class="focus">홈</a></li>
@@ -76,26 +89,22 @@
         
         <!-- Banner -->
         <div class="banner">
-          <div class="banner_slide">
-            <div class="banner_list">
-              <a href="#">
-                <img src="images/v1.png" alt="banner" title="배너" />
-              </a>
-            </div>
-            <div class="banner_list">
-              <a href="#">
-                <img src="images/v2.jpg" alt="banner2" title="배너2" />
-              </a>
-            </div>
-          </div>
+    <!-- 절대로 swiper 단어 고치지 않는다 -->
+    <div class="swiper sw_banner">
+      <div class="swiper-wrapper">
+        <!-- API 연동 -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
 
-          <button class="slide_bt banner_left">
-            <img src="images/slider_arrow.svg" alt="left" title="left" />
-          </button>
-          <button class="slide_bt banner_right">
-            <img src="images/slider_arrow.svg" alt="right" title="right" />
-          </button>
-        </div>
+    <button class="slide_bt banner_left">
+      <img src="images/slider_arrow.svg" alt="left" title="left" />
+    </button>
+
+    <button class="slide_bt banner_right">
+      <img src="images/slider_arrow.svg" alt="right" title="right" />
+    </button>
+  </div>
 
         <!-- tour -->
         <div class="tour">
@@ -187,7 +196,4 @@
   </body>
 </html>
 
-    <!-- js 초기 코드 -->
-    <script src = "js/index.js"></script>
-    <script src = "js/header.js"></script>
 

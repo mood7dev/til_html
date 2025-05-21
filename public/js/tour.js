@@ -38,12 +38,13 @@ window.addEventListener("load", function () {
 
     // 투어 시작
     tourStart();
+  };
 
+  function tourStart() {
     makeTourInit(); // 버튼 이벤트 등록
     activeCateFocus(); // 카테고리 포커스 활성화
     addBtsEvent(); // 버튼 이벤트 등록
-  };
-
+  }
   // 번호에 따라서 실제 화면에 보여줄 tag 만들기
   // 최초 데이터가 전달되면 1번만 실행
   // 카테고리 버튼은 1번만 만들어도 됨.

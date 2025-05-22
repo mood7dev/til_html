@@ -529,8 +529,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 ## 슬라이드 외부 라이브러리 활용하기
 
--절대 직접 만들면 안됨.
-
-https://codesandbox.io/
-
-abc
+- 절대로 직접 만들지 마세요.
+- `Swiper` : 가장 추천 (https://swiperjs.com)
+- `Slick` : 추천 (https://kenwheeler.github.io/slick)
+- `bxSlide` : 비추천 (https://bxslider.com)

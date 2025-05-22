@@ -98,11 +98,11 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <button class="slide_bt banner_left">
+    <button class="slide_bt tour_prev banner_left">
       <img src="images/slider_arrow.svg" alt="left" title="left" />
     </button>
 
-    <button class="slide_bt banner_right">
+    <button class="slide_bt tour_next banner_right">
       <img src="images/slider_arrow.svg" alt="right" title="right" />
     </button>
   </div>
@@ -121,49 +121,19 @@
               </ul>
             </div>
             <div class="section_slide">
-              <!--Start 추후 JSON 데이터 연동으로 변경 예정-->
-              <div class="item">
-                <a href="#">
-                  <div class="item_image">
-                    <img src="images/v7.jpg" alt="나트랑" title="나트랑" />
-                  </div>
-                  <span class="item_name">나트랑</span>
-                  <div class="item_text">
-                    <span class="item_cupon">[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
-                    <p class="item_desc">방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성 윈덤 좀티엔 파타야,마사지 2시간, 핵심일정 포함</p>
-                    <span class="item_price"><b>109,000</b>원~</span>
-                  </div>
-                </a>
+              <!--Swipe 투어 영역-->
+              <div class="swiper sw_tour">
+                <div class="swiper-wrapper">
+                </div>
               </div>
-              <div class="item">
-                <a href="#">
-                  <div class="item_image">
-                    <img src="images/v8.jpg" alt="라스베가스" title="라스베가스" />
-                  </div>
-                  <span class="item_name">라스베가스</span>
-                  <div class="item_text">
-                    <span class="item_cupon">[베스트셀러][4/30까지 발권조건]</span>
-                    <p class="item_desc">미서부 8박10일, 4대캐년+홀슈밴드+3대도시, 꽉찬일정, 여행후기 인증상품</p>
-                    <span class="item_price"><b>109,000</b>원~</span>
-                  </div>
-                </a>
-              </div>
-              <div class="item">
-                <a href="#">
-                  <div class="item_image">
-                    <img src="images/v9.jpg" alt="괌" title="괌" />
-                  </div>
-                  <span class="item_name">괌</span>
-                  <div class="item_text">
-                    <span class="item_cupon">[베스트셀러/W트립]</span>
-                    <p class="item_desc">괌 오전출발 4일 PIC 전일정식사포함+자유일정_티웨이항공,BIG SALE</p>
-                    <span class="item_price"><b>109,000</b>원~</span>
-                  </div>
-                </a>
-              </div>
-
-                <!--End 추후 JSON 데이터 연동으로 변경 예정-->
-              
+                              <!-- 버튼 -->
+                <button class="slide_bt swiper-button-prev tour_prev">
+                <img src="images/slider_arrow.svg" alt="left" title="left" />
+              </button>
+  
+              <button class="slide_bt swiper-button-next tour_next">
+                <img src="images/slider_arrow.svg" alt="right" title="right" />
+              </button>
             </div>
             <!--END 목록영역-->
           </div>

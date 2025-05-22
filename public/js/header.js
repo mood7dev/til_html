@@ -1,70 +1,44 @@
+// DOM 만 완성화면 됩니다. 기준으로 코드를 진행함.
+// DOM 은 html 태그 구조를 말한다.(Document Object Model) : 객체
+// 아래 문장은 html 이 완성되어졌다면 실행하자.
 window.addEventListener("DOMContentLoaded", function () {
-  // 헤더 선택
-  const header = document.querySelector(".header");
+  // 아래 구문은 heder 변수를 만들고 html (document) 에서 css 선택자로 값을 셋팅
+  const header = this.document.querySelector(".header");
+  const headerTop = this.document.querySelector(".header_top");
+  const logo = this.document.querySelector(".logo");
+  const search = this.document.querySelector(".search");
+  const member = this.document.querySelector(".header_top_right");
+  const eventMenu = this.document.querySelector(".header_bottom_eventmenu");
 
-  const logo = document.querySelector(".logo");
-  if (logo) console.log(logo);
+  // 윈도우에 스크롤(scroll 이벤트)이 일어나면 기능을 작동하겠다.
+  this.window.addEventListener("scroll", function () {
+    // 스크롤이 되었을 때 스크롤바의 Y 축의 상단 픽셀위치값
+    const scrollY = window.scrollY;
 
-  const search = document.querySelector(".search");
-  if (search) console.log(search);
+    // headerTop 영역의 높이값을 px 로 알고 싶다.
+    const headerTopH = this.document.querySelector(".header_top");
+    console.log(headerTopH.offsetHeight); //  50px 출력
 
-  const headerTopLeft = document.querySelector(".header_top_left");
-  if (headerTopLeft) console.log(headerTopLeft);
-
-  const headerTopRight = document.querySelector(".header_top_right");
-  if (headerTopRight) console.log(headerTopRight);
-
-  const eventMenu = document.querySelector(".header_bottom_eventmenu");
-  if (eventMenu) console.log(eventMenu);
-});
-
-// CSS 선택자 문자열들을 배열로 모아둠
-// 각각의 문자열은 DOM에서 요소를 선택할 때 사용됨
-const elements = [
-  ".logo", // class="logo" 인 요소
-  ".search", // class="search" 인 요소
-  ".header_top_left", // class="header_top_left" 인 요소
-  ".header_top_right", // class="header_top_right" 인 요소
-  ".header_bottom_eventmenu", // class="header_bottom_eventmenu" 인 요소
-];
-
-// 배열에 담긴 각 CSS 선택자(selector)를 반복하면서
-elements.forEach((selector) => {
-  // 현재 선택자에 해당하는 요소를 문서에서 찾아서 el 변수에 저장
-  const el = document.querySelector(selector);
-
-  // 만약 해당 요소(el)가 실제로 존재한다면
-  if (el) {
-    // 콘솔에 요소를 출력 (개발자 도구에서 확인 가능)
-    console.log(el);
-  }
-});
-
-// 스크롤 추가
-window.addEventListener("DOMContentLoaded", function () {
-  const headerBottom = document.querySelector(".header_bottom");
-  const header = document.querySelector(".header");
-
-  if (!headerBottom || !header) return;
-
-  // 기준점: header의 높이만큼 스크롤되면 고정 시작
-  const threshold = header.offsetTop + header.offsetHeight;
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY >= threshold) {
-      headerBottom.classList.add("fixed");
+    // 만약 50 보다 작으면 전체 를 보이고, 그렇지 않으면 일부분을 숨긴다.
+    if (scrollY <= headerTopH.offsetHeight) {
+      // console.log("모두 보여라");
+      logo.style.display = "block";
+      eventMenu.style.display = "block";
+      // class 제거로 변경
+      header.classList.remove("header_down");
+      headerTop.classList.remove("header_top_down");
+      search.classList.remove("search_down");
+      member.classList.remove("member_down");
     } else {
-      headerBottom.classList.remove("fixed");
+      // console.log("일부만 보여라");
+      // 로고를 css 로 제어하겠다.
+      logo.style.display = "none";
+      eventMenu.style.display = "none";
+      // class 추가로 변경
+      header.classList.add("header_down");
+      headerTop.classList.add("header_top_down");
+      search.classList.add("search_down");
+      member.classList.add("member_down");
     }
-  });
-});
-
-// 홈 투어 티켓 클릭
-document.querySelectorAll(".nav li a").forEach((link) => {
-  link.addEventListener("click", () => {
-    document
-      .querySelectorAll(".nav li a")
-      .forEach((l) => l.classList.remove("focus"));
-    link.classList.add("focus");
   });
 });

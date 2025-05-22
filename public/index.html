@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | 인터파크</title>
+    <title>나의 til</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
     <!-- 외부라이브러리 -->
     <link
       rel="stylesheet"
@@ -15,152 +19,172 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/tour.css" />
-        <!-- js 초기 코드 -->
-        <script src = "js/index.js"></script>
-        <script src = "js/header.js"></script>   
-        <script src = "js/banner.js"></script>
-        <script src = "js/tour.js"></script>
-    
+
+    <!-- js 초기 코드  -->
+    <script src="js/index.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/tour.js"></script>
   </head>
+
   <body>
-    <!-- 전체 레이아웃 -->
+    <!-- 전체 레이아웃  -->
     <div class="wrap">
       <!-- 상단 -->
       <header class="header">
         <div class="layout">
-          <!--상단의 위-->
-            <div class="header_top">
-              <div class="header_top_left">
-                <!--로고-->
-                <div class="logo">
-                  <a href="http://www.interpark.com" target="_blank">
-                    <img src="images/logo.svg" alt="로고" title="인터파크" />
+          <!-- 상단의 위 -->
+          <div class="header_top">
+            <div class="header_top_left">
+              <!-- 로고 -->
+              <div class="logo">
+                <a href="http://www.interpark.com" target="_blank">
+                  <img src="images/logo.svg" alt="로고" title="인터파크" />
+                </a>
+              </div>
+              <!-- 제품검색 -->
+              <div class="search">
+                <!-- 제품 검색 API 연동 -->
+                <form class="search_from">
+                  <input
+                    class="search_from_word"
+                    type="text"
+                    placeholder="이제 NOL 인터파크로 떠나요!"
+                  />
+                  <input
+                    class="search_from_button"
+                    type="submit"
+                    value="검색"
+                  />
+                </form>
+              </div>
+            </div>
+            <div class="header_top_right">
+              <ul class="memeber">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 상단의 아래 -->
+          <div class="header_bottom">
+            <div class="header_bottom_nav">
+              <ul class="nav">
+                <li><a href="#" class="focus">홈</a></li>
+                <li><a href="#">투어</a></li>
+                <li><a href="#">티켓</a></li>
+              </ul>
+            </div>
+            <div class="header_bottom_eventmenu">
+              <ul class="cupon">
+                <li>
+                  <a href="#">
+                    해외여행쿠폰
+                    <img
+                      src="images/badge_hot.svg"
+                      alt="해외여행쿠폰"
+                      title="해외여행쿠폰"
+                    />
                   </a>
-                </div>
-                <!--제품검색-->
-                <div class="search">
-                  <!--제품 검색 API 연동-->
-                  <form class="search_from">
-                    <input class="search_from_word" 
-                          type="text" 
-                          placeholder="이제 NOL 인터파크로 떠나요!" />
-                    <input class="search_from_button" 
-                           type="submit" 
-                           value="검색" />
-                  </form>
-                </div>
-              </div>
-              <div class="header_top_right">
-                <!--회원관련메뉴-->
-                <ul class="memeber">
-                  <li><a href="#">로그인</a></li>
-                  <li><a href="#">회원가입</a></li>
-                </ul>
-              </div>
+                </li>
+                <li>
+                  <a href="#">
+                    국내여행쿠폰
+                    <img
+                      src="images/badge_hot.svg"
+                      alt="국내여행쿠폰"
+                      title="국내여행쿠폰"
+                    />
+                  </a>
+                </li>
+                <li><a href="#">여행혜택존</a></li>
+                <li><a href="#">여행준비</a></li>
+              </ul>
             </div>
-          <!--상단의 아래-->
-            <div class="header_bottom">
-                <!-- 네비게이션 메뉴 -->
-              <div class="header_bottom_nav">
-                <ul class="nav">
-                  <li><a href="#" class="focus">홈</a></li>
-                  <li><a href="#" class="no-bold">투어</a></li>
-                  <li><a href="#" class="no-bold">티켓</a></li>
-                </ul>
-              </div>
-              <div class="header_bottom_eventmenu">
-                <ul class="cupon">
-                  <li>
-                    <a href="#">
-                      해외여행쿠폰
-                      <img src="images/badge_hot.svg" alt="해외여행쿠폰" title="해외여행쿠폰" /></a></li>
-                  <li><a href="#">
-                      국내여행쿠폰
-                      <img src="images/badge_hot.svg" alt="국내여행쿠폰" title="국내여행쿠폰" /></a></li>
-                  <li><a href="#">여행혜택존</a></li>
-                  <li><a href="#">여행준비</a></li>
-                </ul>
-              </div>
-            </div>
+          </div>
         </div>
       </header>
       <!-- 메인 -->
       <main>
         <div class="layout">
-        
-        <!-- Banner -->
-        <div class="banner">
-    <!-- 절대로 swiper 단어 고치지 않는다 -->
-    <div class="swiper sw_banner">
-      <div class="swiper-wrapper">
-        <!-- API 연동 -->
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-
-    <button class="slide_bt tour_prev banner_left">
-      <img src="images/slider_arrow.svg" alt="left" title="left" />
-    </button>
-
-    <button class="slide_bt tour_next banner_right">
-      <img src="images/slider_arrow.svg" alt="right" title="right" />
-    </button>
-  </div>
-
-        <!-- tour -->
-        <div class="tour">
-          <div class="section_top">
-            <h2 class="section_title">투어 특가</h2>
-            <span class="section_desc">마감임박! 금주의 특가 여행 추천</span>
-          </div>
-          <div class="section_list">
-            <!--START 목록영역-->
-            <div class="section_category">
-              <ul class="section_category_bts">
-                <!-- Api 연동 -->
-              </ul>
-            </div>
-            <div class="section_slide">
-              <!--Swipe 투어 영역-->
-              <div class="swiper sw_tour">
-                <div class="swiper-wrapper">
-                </div>
+          <!-- Banner -->
+          <div class="banner">
+            <!-- 절대로 swiper 단어 고치지 않는다 -->
+            <div class="swiper sw_banner">
+              <div class="swiper-wrapper">
+                <!-- API 연동 -->
               </div>
-                              <!-- 버튼 -->
-                <button class="slide_bt swiper-button-prev tour_prev">
-                <img src="images/slider_arrow.svg" alt="left" title="left" />
-              </button>
-  
-              <button class="slide_bt swiper-button-next tour_next">
-                <img src="images/slider_arrow.svg" alt="right" title="right" />
-              </button>
+              <div class="swiper-pagination"></div>
             </div>
-            <!--END 목록영역-->
+
+            <button class="slide_bt banner_left">
+              <img src="images/slider_arrow.svg" alt="left" title="left" />
+            </button>
+
+            <button class="slide_bt banner_right">
+              <img src="images/slider_arrow.svg" alt="right" title="right" />
+            </button>
           </div>
-          <div class="section_bts">
-            <a href="#">
-              투어 홈 바로가기
-              <img src="images/icon_linkArrow.svg" alt="투어 홈 바로가기" title="투어 홈 바로가기" />
-            </a>
+          <!-- Tour -->
+          <div class="tour">
+            <div class="section_top">
+              <h2 class="section_title">투어 특가</h2>
+              <span class="section_desc">마감임박! 금주의 특가 여행 추천</span>
+            </div>
+            <div class="section_list">
+              <!--Start 목록영역 -->
+              <div class="section_category">
+                <ul class="section_category_bts">
+                  <!-- API 연동 -->
+                </ul>
+              </div>
+
+              <div class="section_slide">
+                <!-- Swipe 투어 영역 -->
+                <div class="swiper sw_tour">
+                  <div class="swiper-wrapper">
+                    <!-- API 연동 -->
+                  </div>
+                </div>
+
+                <button class="slide_bt tour_prev banner_left">
+                  <img src="images/slider_arrow.svg" alt="left" title="left" />
+                </button>
+
+                <button class="slide_bt tour_next banner_right">
+                  <img
+                    src="images/slider_arrow.svg"
+                    alt="right"
+                    title="right"
+                  />
+                </button>
+              </div>
+
+              <!--End 목록영역 -->
+            </div>
+            <div class="section_bts">
+              <a href="#">
+                투어 홈 바로가기
+                <img
+                  src="images/icon_linkArrow.svg"
+                  alt="투어 홈 바로가기"
+                  title="투어 홈 바로가기"
+                />
+              </a>
+            </div>
           </div>
+          <!-- Trip -->
+          <div></div>
+          <!-- Ticket -->
+          <div></div>
+          <!-- Live -->
+          <div></div>
         </div>
-        <!-- tirp -->
-        <div></div>
-        <!-- ticket -->
-        <div></div>
-        <!-- live -->
-        <div></div>
-       </div>
-      </div>
       </main>
       <!-- 하단 -->
       <footer>
-        <div class="layout">
-
-        </div>
+        <div></div>
       </footer>
     </div>
   </body>
 </html>
-
-

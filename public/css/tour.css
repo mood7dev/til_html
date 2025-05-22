@@ -10,13 +10,14 @@
   text-align: center;
   font-size: 28px;
   font-weight: 700;
+  color: rgba(0, 0, 0, 0.89);
 }
 .section_desc {
   display: block;
   text-align: center;
   font-size: 18px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+  color: hsla(0, 0%, 7%, 0.5);
 }
 .section_list {
   position: relative;
@@ -35,13 +36,13 @@
 .section_category_bts > li > button {
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
-  padding: 15px 20px;
+  padding: 12px 20px;
   border-radius: 52px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
 
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .section_category_bts > li > button.cate_focus {
   border: 1px solid #333333;

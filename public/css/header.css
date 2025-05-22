@@ -176,6 +176,7 @@
 /* 클릭 시 표시 (focus 클래스로 컨트롤) */
 .nav li a.focus::after {
   opacity: 1;
+  bottom: -8px;
 }
 
 /* hover 시 아무 효과 없음 */

@@ -110,6 +110,7 @@ window.addEventListener("load", function () {
     // 1.2. html 로 만들기
     let html = "";
     const listArr = cateListArr[cateFocusIndex];
+
     listArr.forEach(function (item) {
       const tag = `
       <div class="swiper-slide">

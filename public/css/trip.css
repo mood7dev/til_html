@@ -7,6 +7,19 @@
   padding-bottom: 22px;
 }
 
+.wTrip_with__ivALN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.wTrip_main_link,
+.wTrip_help_link {
+  display: inline-flex;
+  align-items: center;
+}
+
 .highlight_desc {
   display: block;
   font-size: 18px;

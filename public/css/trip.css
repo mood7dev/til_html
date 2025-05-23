@@ -1,0 +1,161 @@
+.trip {
+  position: relative;
+  margin-top: 65px;
+}
+
+.highlight_top {
+  padding-bottom: 22px;
+}
+
+.highlight_desc {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: hsla(0, 0%, 7%, 0.5);
+}
+
+.highlight_list {
+  position: relative;
+}
+
+.highlight_category {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.highlight_category_Wtrip {
+  display: flex;
+  gap: 6px;
+}
+
+.highlight_category_Wtrip > li > button {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 52px;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.highlight_category_Wtrip > li > button.cate_focus {
+  font-weight: 700;
+  color: #fff;
+  background-color: #333333;
+  border: 1px solid #333333;
+}
+
+.highlight_slide {
+  position: relative;
+
+  margin-bottom: 20px;
+}
+
+.bodyitem {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+
+.bodyitem > a {
+}
+
+.bodyitem_image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.bodyitem_image > img {
+  display: block;
+  width: 100%;
+  /* 비율을 유지하면서 영역에 이미지 가득 채우기 */
+  height: 100%;
+  object-fit: cover;
+}
+
+.bodyitem_name {
+  position: absolute;
+  top: 235px;
+  left: 20px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+
+  background-color: #1769ff;
+
+  border-radius: 4px;
+}
+
+.bodyitem_text {
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.bodyitem_cupon {
+  display: block;
+  /* 말줄임 처리 */
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1769ff;
+  /* 줄내림 방지 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bodyitem_desc {
+  display: block;
+  /* 말줄임 처리 */
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  /* 줄내림 방지 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bodyitem_price {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.bodyitem_price > b {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.highlight_More {
+  display: flex;
+  justify-content: center;
+}
+
+.highlight_More > a {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: 700;
+
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 40px;
+  gap: 5px;
+}
+
+.highlight_More > a > img {
+  transform: translateY(1px);
+}
+
+/* swiper 버튼 비활성시 표현 */
+.swiper-button-disabled {
+  display: none !important;
+}

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/tour.css" />
+    <link rel="stylesheet" href="css/trip.css" />
 
     <!-- js 초기 코드  -->
     <script src="js/index.js"></script>
@@ -45,14 +46,14 @@
               <!-- 제품검색 -->
               <div class="search">
                 <!-- 제품 검색 API 연동 -->
-                <form class="search_from">
+                <form class="search_form">
                   <input
-                    class="search_from_word"
+                    class="search_form_word"
                     type="text"
                     placeholder="이제 NOL 인터파크로 떠나요!"
                   />
                   <input
-                    class="search_from_button"
+                    class="search_form_button"
                     type="submit"
                     value="검색"
                   />
@@ -60,7 +61,7 @@
               </div>
             </div>
             <div class="header_top_right">
-              <ul class="memeber">
+              <ul class="member">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
               </ul>
@@ -104,8 +105,11 @@
           </div>
         </div>
       </header>
+      <!-- 모바일 상단 -->
+      <div class="m_header">모바일 헤더</div>
+
       <!-- 메인 -->
-      <main>
+      <main class="main">
         <div class="layout">
           <!-- Banner -->
           <div class="banner">
@@ -117,11 +121,11 @@
               <div class="swiper-pagination"></div>
             </div>
 
-            <button class="slide_bt banner_left">
+            <button class="slide_bt banner_prev slide_bt_left">
               <img src="images/slider_arrow.svg" alt="left" title="left" />
             </button>
 
-            <button class="slide_bt banner_right">
+            <button class="slide_bt banner_next slide_bt_right">
               <img src="images/slider_arrow.svg" alt="right" title="right" />
             </button>
           </div>
@@ -147,11 +151,11 @@
                   </div>
                 </div>
 
-                <button class="slide_bt tour_prev banner_left">
+                <button class="slide_bt tour_prev slide_bt_left">
                   <img src="images/slider_arrow.svg" alt="left" title="left" />
                 </button>
 
-                <button class="slide_bt tour_next banner_right">
+                <button class="slide_bt tour_next slide_bt_right">
                   <img
                     src="images/slider_arrow.svg"
                     alt="right"
@@ -173,32 +177,80 @@
               </a>
             </div>
           </div>
+
           <!-- Trip -->
           <div class="trip">
-            <div class="trip_top">
-              <span class="trip_desc"
+            <div class="highlight_top">
+              <div class="wTrip_with__ivALN">
+                <a href="#">
+                  W트립
+                  <img
+                    src="images/icon_w_trip_new_pc.svg"
+                    alt="W트립"
+                    title="W트립"
+                  />
+                </a>
+              </div>
+              <span class="highlight_desc"
                 >누구와 여행 가시나요? 동행자별 맞춤여행</span
               >
             </div>
-            <div class="trip_list">
+            <div class="highlight_list">
               <!--Start 목록영역 -->
-              <div class="trip_category">
-                <ul class="trip_category_Wtrip">
+              <div class="highlight_category">
+                <ul class="highlight_category_Wtrip">
                   <!-- API 연동 -->
                 </ul>
               </div>
-              <div class="trip_slide">
+              <div class="highlight_slide">
+                <div class="bodyitem">
+                  <a href="#">
+                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                    <span>나트랑</span>
+                    <span>10%쿠폰</span>
+                    <p>방콕/파타야 5일</p>
+                    <span><b>129,000</b>원~</span>
+                  </a>
+                </div>
+                <div class="bodyitem">
+                  <a href="#">
+                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                    <span>나트랑</span>
+                    <span>10%쿠폰</span>
+                    <p>방콕/파타야 5일</p>
+                    <span><b>129,000</b>원~</span>
+                  </a>
+                </div>
+                <div class="bodyitem">
+                  <a href="#">
+                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                    <span>나트랑</span>
+                    <span>10%쿠폰</span>
+                    <p>방콕/파타야 5일</p>
+                    <span><b>129,000</b>원~</span>
+                  </a>
+                </div>
+                <div class="bodyitem">
+                  <a href="#">
+                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                    <span>나트랑</span>
+                    <span>10%쿠폰</span>
+                    <p>방콕/파타야 5일</p>
+                    <span><b>129,000</b>원~</span>
+                  </a>
+                </div>
+                <!--End 추후 JSON 데이터 연동으로 변경 예정-->
                 <!-- Swipe 투어 영역 -->
                 <div class="swiper sw_trip">
-                  <div class="swiper-trip-wrapper">
+                  <div class="swiper-wrapper">
                     <!-- API 연동 -->
                   </div>
                 </div>
-                <button class="버튼이름">
+                <button class="slide_bt trip_prev banner_left">
                   <img src="images/slider_arrow.svg" alt="left" title="left" />
                 </button>
 
-                <button class="버튼이름2">
+                <button class="slide_bt trip_next banner_right">
                   <img
                     src="images/slider_arrow.svg"
                     alt="right"
@@ -206,10 +258,9 @@
                   />
                 </button>
               </div>
-
               <!--End 목록영역 -->
             </div>
-            <div class="section_More">
+            <div class="highlight_More">
               <a href="#">
                 w트립 상품 더보기
                 <img

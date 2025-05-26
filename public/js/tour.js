@@ -139,6 +139,8 @@ window.addEventListener("load", function () {
       `;
       html = html + tag;
     });
+
+    console.log(html);
     swTourWrap.innerHTML = html;
 
     // 2. 항상 슬라이드가 만들어져 있다면 삭제하고

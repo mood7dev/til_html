@@ -32,36 +32,6 @@
   position: relative;
 }
 
-.highlight_category {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 24px;
-}
-
-.highlight_category_Wtrip {
-  display: flex;
-  gap: 6px;
-}
-
-.highlight_category_Wtrip > li > button {
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: 400;
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-  border-radius: 52px;
-
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.highlight_category_Wtrip > li > button.cate_focus {
-  font-weight: 700;
-  color: #fff;
-  background-color: #333333;
-  border: 1px solid #333333;
-}
-
 .highlight_slide {
   position: relative;
 
@@ -171,4 +141,32 @@
 /* swiper 버튼 비활성시 표현 */
 .swiper-button-disabled {
   display: none !important;
+}
+
+.sw_trip_pg .swiper {
+  bottom: -25px !important;
+  display: none;
+}
+
+@media all and (max-width: 1024px) {
+  .sw_trip_pg {
+    display: block;
+  }
+
+  .sw_trip_pg .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background-color: #fff !important;
+    opacity: 0.4;
+  }
+
+  .sw_trip_pg .swiper-pagination-bullet-active {
+    background-color: #fff !important;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .sw_trip_pg {
+    bottom: 10px !important;
+  }
 }

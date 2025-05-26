@@ -30,14 +30,14 @@ window.addEventListener("load", function () {
       const tempObj = _data[i];
 
       const tag = `
-      <div class="swiper-slide" id="${tempObj.id}">
-          <div class="banner_list">
-          <a href="${tempObj.url}">
-              <img src="${tempObj.img}" alt="${tempObj.alt}" title="${tempObj.alt}" />
-          </a>
-          </div>
-      </div>
-      `;
+    <div class="swiper-slide" id="${tempObj.id}">
+        <div class="banner_list">
+        <a href="${tempObj.url}">
+            <img src="${tempObj.img}" alt="${tempObj.alt}" title="${tempObj.alt}" />
+        </a>
+        </div>
+    </div>
+    `;
       htmlTag = htmlTag + tag;
     }
 
@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
       speed: 1500,
       loop: true,
       pagination: {
-        el: ".sw_banner .swiper-pagination",
+        el: ".sw_banner_pg",
         clickable: true,
       },
       navigation: {
@@ -61,8 +61,26 @@ window.addEventListener("load", function () {
         prevEl: ".banner_prev",
       },
       autoplay: {
-        delay: 1000,
+        delay: 2500,
         disableOnInteraction: false,
+      },
+      // 화면의 해상도에 따라서 작동
+      breakpoints: {
+        //760 이상면,
+        760: {
+          slidesPerView: 1,
+          spaceBetween: 25,
+        },
+        //960 이상면,
+        960: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        //1024 이상면,
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
       },
     });
 

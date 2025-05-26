@@ -33,8 +33,7 @@
 }
 
 .highlight_slide {
-  position: relative;
-
+  position: relative; /* 버튼 위치 기준 */
   margin-bottom: 20px;
 }
 
@@ -144,29 +143,22 @@
 }
 
 .sw_trip_pg .swiper {
-  bottom: -25px !important;
+  bottom: 10px !important; /* 기본 상태에서도 위치를 위로 올림 */
   display: none;
 }
 
+/*반응형*/
 @media all and (max-width: 1024px) {
-  .sw_trip_pg {
-    display: block;
+  .trip {
+    border-top: 8px solid #f4f4f4;
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+  .trip .highlight_top {
+    padding-bottom: 12px;
   }
 
-  .sw_trip_pg .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    background-color: #fff !important;
-    opacity: 0.4;
-  }
-
-  .sw_trip_pg .swiper-pagination-bullet-active {
-    background-color: #fff !important;
-  }
-}
-
-@media all and (max-width: 960px) {
-  .sw_trip_pg {
-    bottom: 10px !important;
+  .trip .highlight_desc {
+    font-size: 15px;
   }
 }

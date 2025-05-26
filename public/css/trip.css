@@ -64,15 +64,21 @@
 
 .bodyitem_name {
   position: absolute;
-  top: 235px;
+  top: 230px;
   left: 20px;
   padding: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
-
-  background-color: #1769ff;
-
+  color: #1c1c1e;
+  background: linear-gradient(
+    90deg,
+    #4ed8eb 0.08%,
+    #c9d8f4 21.6%,
+    #fbeaf0 42.04%,
+    #c0f3f3 65.17%,
+    #a9eeee 83.46%,
+    #5cf3dc 100%
+  );
   border-radius: 4px;
 }
 
@@ -82,15 +88,22 @@
 }
 
 .bodyitem_cupon {
-  display: block;
-  /* 말줄임 처리 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 최대 줄 수 */
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 14px;
-  font-weight: 400;
-  color: #1769ff;
-  /* 줄내림 방지 */
-  white-space: nowrap;
   text-overflow: ellipsis;
+
+  font-size: 18px;
+  line-height: 1.4; /* 줄 간격 설정 (조절 가능) */
+  font-weight: 400;
+  color: #29292d;
+
+  /* white-space 제거: 줄바꿈 허용 */
+  white-space: normal;
+
+  /* 선택적으로 높이 고정 (더 깔끔하게 제어) */
+  max-height: calc(1.4em * 2); /* line-height * 2줄 */
 }
 
 .bodyitem_desc {
@@ -99,10 +112,12 @@
   overflow: hidden;
   font-size: 14px;
   font-weight: 400;
-  color: #333;
+  color: #121212a1;
   /* 줄내림 방지 */
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .bodyitem_price {

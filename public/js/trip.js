@@ -24,12 +24,15 @@ window.addEventListener("load", function () {
             <a href="${item.link}">
               <div class="bodyitem_image">
                 <img src="${item.image}" alt="${item.title}" title="${item.title}" />
+                <div class="bodyitem_name">
+                  <img src="/public/images/icon_w_logo_new.png" alt="아이콘" class="icon" />
+                  ${item.city}
+                </div>
               </div>
-              <span class="bodyitem_name">${item.city}</span>
               <div class="bodyitem_text">
                 <span class="bodyitem_cupon">${item.title}</span>
                 <p class="bodyitem_desc">${item.content}</p>
-                <span class="bodyitem_price"><b>${item.price}</b>원~</span>
+                <span class="bodyitem_price"><b>${item.price}</b></span>
               </div>
             </a>
           </div>

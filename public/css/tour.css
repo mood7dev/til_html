@@ -90,15 +90,13 @@
 
 .item_name {
   position: absolute;
-  top: 235px;
+  top: 230px;
   left: 20px;
   padding: 10px;
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-
   background-color: #1769ff;
-
   border-radius: 4px;
 }
 

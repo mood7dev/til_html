@@ -17,8 +17,13 @@ a {
 ul {
   list-style: none;
 }
+
 html {
   width: 100%;
+  /* 반응형 최소 너비 설정 */
+  min-width: 540px;
+  /* 가로 스크롤은  uI 상 좋지 않아요 */
+  overflow-x: hidden;
   /* 디자인 보고 수정 */
   font-size: 12px;
 }
